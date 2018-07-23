@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="./Gauge/css/cmGauge.css">
 </head>
 <style>
-    body { margin:0; padding:0; color:#717171;}
+    body { margin:0; padding:0;color:#717171 }
     li{
         list-style: none;
     }
@@ -27,7 +27,7 @@
     a#upload-data-btn.nav-link{
         margin-right: 10px;
     }
-    #map { width:100%; height: 600px; z-index: -1}
+    #map { width:100%; height: 250px; z-index: -1}
     .sidenav {
         height: 100%;
         width: 0;
@@ -106,6 +106,105 @@
     }
 
 
+
+/*nav*/
+nav.navbar{
+    background:transparent;
+}
+a.dropdown-toggle{
+    color: #036920;
+}
+a#user-menu-btn{
+    color: #036920;
+}
+
+  /*jumbotron*/
+  .jumbotron{
+      margin-bottom: 0;
+      padding: 0;
+      border-radius: 0;
+  }
+
+  [role="main"]{
+      padding-top: 0;
+  }
+    
+    .view-selection-sensor{
+        display: inherit;
+      margin: auto;
+    }
+    .view-sensor{
+        color: #036920;
+        float: right;
+        border: 1px solid #dfdfdf;
+        background: #e6e6e6;
+    }
+
+    /*list card*/
+   .sensorList{
+       margin: 0 20px;
+       overflow-y: scroll;
+       height: 300px;
+   }
+   div.card-header{
+       padding: 5px;
+   }
+   .card.general{
+       border: none;
+   }
+   .card-header.general{
+       background: #fff;
+       border: none;
+       color: #036920;
+   }
+   .card-body{
+       padding: 0.9rem 1.25rem;
+   }
+   button.name{
+       color: #717171;
+   }
+   a.general-track{
+       color: #036920;
+   }
+    /*charts js*/
+    
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+
+    /************************************************/
+    .all-sensor{
+        margin-top: 50px;
+    }
+    div.card-body.active{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    div.card-body.active h6{
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        float: right;
+    }
+    div.card-body.title{
+        padding: 2.9rem 1.25rem 0;
+        border: 1px solid #e9ecef;
+        background: #e9ecef;
+        color: #036920;
+        cursor: pointer;
+    }
+    div.card-body.title-general{
+        background: #036920;
+        color: #fff;
+        border: 1px solid #036920;
+    }
+    h5{
+        font-weight: normal;
+    }
+    .list-sesor-trackboard{
+        margin-bottom: 30px;
+    }
 #dot {
       height: 10px;
       width: 10px;
@@ -127,7 +226,9 @@
     #dot.connected {
       background-color: #69af22;
     }
-
+    #dot.active {
+      background-color: #69af22;
+    }
     span#dot span {
         position: relative;
         left: 15px;
@@ -142,135 +243,31 @@
     #dot.connected span#not-connected-label {
       display: none;
     }
-.sidebar{
-    padding-top: 0;
-}
- .sidebar-sticky {
-    position: relative;
-    height: calc(85vh - 40px);
-    overflow-x: hidden;
-    overflow-y: auto; 
-  }
-/*nav*/
-nav.navbar{
-    background:transparent;
-}
-a.dropdown-toggle{
-    color: #036920;
-}
-a#crop-dropdown{
-    color: #036920;
-}
-a#user-menu-btn{
-    color: #036920;
-}
 
-  /*jumbotron*/
-  .jumbotron{
-      margin-bottom: 0;
-      padding: 0;
-      border-radius: 0;
-  }
-
-  [role="main"]{
-      padding-top: 0;
-  }
-    .variables-value{
-        background: #FFF;
-        padding: 2% 5%;
-        margin: 6px;
-        border-right: 1px solid #dfdfdf;
-    }
-    .value-dato{
-        text-align: center;
-        color: #69af22;
-        font-weight: bold;
-        font-size: 30px;
-    }
-    a.dropdown-item{
-      color: #717171;
-    }
-    h6.text-center{
-      color: #707070;
-      font-weight: normal;
-      font-size: 14px;
-    }
-    
-    .contenedor-datos.row{
-      margin-top: 25px;
-    }
-    .view-selection-sensor{
-        display: inherit;
-      margin: auto;
-    }
-    .view-sensor{
-        color: #036920;
-        float: right;
-        border: 1px solid #dfdfdf;
-        background: #e6e6e6;
-    }
-
-    /*list card*/
-   .sensorList{
-       margin: 5px;
-       overflow-y: scroll;
-       height: 300px;
-   }
-   div.card-header{
-       padding: 5px;
-   }
-   .card.general{
-       border: none;
-   }
-   .card-header.general{
-       background: #fff;
-       border: none;
-       color: #036920;
-   }
-   
-   button.name{
-       color: #717171;
-   }
-   a.general-track{
-       color: #036920;
-   }
-    /*charts js*/
-    a.canvasjs-chart-credit{
-      display: none;
-    }
-    .datos-ambient{
-        color: #036920;
-    }
-    .datos-ambient:hover{
-        color: #036920;
-    }
-    #myChart{
-        width: 100%;
-        height: 150px;
-    }
-    circle#myChart-graph-id0-scale-r-0-center-circle{
-        stroke-width: 1px;
-        stroke:#69af22;
-        r: 2;
-    }
-    path#myChart-graph-id0-scale-r-ring-path{
-        fill: #dfdfdf;
-    }
-    path#myChart-graph-id0-plotset-plot-0-node-0-arrow-path{
-        fill: #69af22;
-    }
     a.dropdown-item:hover{
         color: #69af22;
     }
-    @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    /*list css*/
+    td button.btn.btn-light{
+        color: #dfdfdf;
+        padding: 2px 5px;
+    }
+    td button.btn.btn-light:hover{
+        color: #036920;
+    }
+    i.fas.fa-microchip{
+        padding: 10px;
+        background: #036920;
+        color: #fff;
+        border-radius: 100px;
+    }
+    td a{
+        color: #036920;
     }
 </style>
 <body>
     <div id="mySidenav" class="sidenav">
-        <a href="sensor.html"><img src="./img/spaceag.png" width="150px" alt="" id="sidenavImg"></a> 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="imgLogo" href="sensor.html"><img src="./img/spaceag.png" width="150px" alt="" id="sidenavImg"></a>
         <form action="" class="container search-trackBoard">
             <div class="form-row align-items-center">
                     <div class=" my-1">
@@ -550,189 +547,167 @@ a#user-menu-btn{
     <section class="jumbotron">
        <div class="container-fluid">
 			<nav class="navbar navbar-expand">
-                <li class="nav-item">
-                    <a id="upload-data-btn" class="nav-link btn btn-light general-track" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="openNav()">
-                        <span class="fa fa-bars " ></span>
-                        Tractor #1
-                    </a>	
-                </li>
+               
 				<div class="collapse navbar-collapse text-center " id="">
 				  	<ul class="navbar-nav ml-auto view-selection-sensor">
 					    <li class="nav-item">
 							  	<a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track" href="#" role="button" id="org-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							    	<i class="fas fa-search"></i>
 							  	</a>
-					    </li>					    
-					    <li class="nav-item" >
-							  	<a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-sensorBoardList"  role="button" id="crop-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    	<i class="fas fa-sitemap"></i>
-                                </a>
+					    </li>				    
+					    <li class="nav-item">
+                            <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-board-sensor-list1" href="#" role="button" id="crop-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-list-ul"></i>
+                            </a>
 					    </li>
 				  	</ul>
 				</div>
 			</main>		
 		</div>
     </section>
-    <div class="container-fluid">
-            <div class="row">
-              <main role="main" class="col-lg-6 col-md-12 ml-sm-auto">
-                <div id='map'>
-                </div>
-              </main>
-              <nav class="col-lg-6 d-md-block sidebar">
-                  <div class="sidebar-sticky">
-                    <h6 id="connected-bar" class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                      <span id="dot">
-                        <span id="connected-label">
-                          Conectado
-                        </span> 
-                        <span id="not-connected-label">
-                          No Conectado
-                        </span> 
-                      </span> 
-                    </h6>
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                            <li class="nav-item">
-                                <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
-                                     DATOS AMBIENTALES
-                                </a>	
-                            </li>
-                        </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Temperature
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Temperature:</h6>
-                                   <div class="temperature value-dato" id="temperature">100.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Humidity
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Humidity:</h6>
-                                   <div class="humidity value-dato" id="humidity">20.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Light(lux)
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Light(lux):</h6>
-                                   <div id='myChart' ></div>
-                               </div>
-                           </div>
-                          
-                     </div>
-                     <div class="contenedor-datos row">
-                       <div class="col-12">
-                         <div id="level-components">
-                          <div id="chartContainer" style="height: 250px; width: 100%;"></div>
-                          </div>
-                       </div>
-                     </div>
-                   
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                            <li class="nav-item">
-                                <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
-                                     DATOS TRACTOR
-                                </a>	
-                            </li>
-                        </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Velocidad
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Speed:</h6>
-                                <div id='mySpeed'></div>
-                            </div>
-                        </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Batería
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Battery:</h6>
-                                <div class="battery value-dato" id="battery">100.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Nivel del tanque
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Tank-level:</h6>
-                                <div class="tank-level value-dato" id="tank-level">100.00
-                                </div>
-                            </div>
-                        </div>
+    <div class="container all-sensor">
+        <table class="table table-hover">
+            <div  id="select-dispositivos">DISPOSITIVOS</div>
+            <thead>
+              <tr>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                           
+                        </label>
                     </div>
-                    <div class="contenedor-datos row">
-                        
-                            
-                      </div>
-                    
-                  </div>
-                </nav>
-            </div>
-          </div>
+                </th>
+                <th scope="col">NAME</th>
+                <th scope="col">LAST ACTIVITY</th>
+                <th scope="col">CREATED AT <i class="fas fa-arrow-down"></i></th>
+                <th scope="col" >ORGANIZATION</th>
+                <th scope="col">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td><a href="">TrackBoard #1</a> </td>
+                <td>25 min Ago</td>
+                <td>
+                    2018-07-11 10:33:41 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td><a href="">Sensor Board</a> </td>
+                <td>1 min Ago</td>
+                <td>
+                    2018-07-11 10:13:49 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td ><a href="">Tractor Arandanos</a> </td>
+                <td>Active</td>
+                <td>
+                    2018-07-03 03:02:26 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td><a href="">TrackBoard</a> </td>
+                <td>1 min Ago</td>
+                <td>
+                    2018-06-07 13:51:52 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td ><a href="">Sensor</a> </td>
+                <td>Active</td>
+                <td>
+                    2018-06-06 13:59:51 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td ><a href="">Sensor A</a> </td>
+                <td>10 seg Ago</td>
+                <td>
+                    2018-06-06 13:59:51 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-microchip"></i></th>
+                <td ><a href="">Tractor Palto</a> </td>
+                <td>Active</td>
+                <td>
+                    2018-06-06 13:59:51 -05:00
+                </td>
+                <td class="text-center">---</td>
+                <td>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Add Organization">
+                        <i class="fas fa-sitemap"></i>
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
     
    
 
@@ -751,213 +726,12 @@ a#user-menu-btn{
 <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"; ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
 <script type="text/javascript">
 
-//SIDEBAR
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-
-//SEARCH
-    $(document).ready(function(){
-    $('#search').on("keyup", function(){
-        var value = $(this).val().toLowerCase();
-        $(".sensorList .list").filter(function(){
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-    });
-    });
-    // search
-    $(".clearable").each(function() {
-
-    var $inp = $(this).find("input:text"),
-        $cle = $(this).find(".clearable_clear");
-
-    $inp.on("input", function(){
-        $cle.toggle(!!this.value);
-    });
-    
-    $cle.on("touchstart click", function(e) {
-        e.preventDefault();
-        $inp.val("").trigger("input");
-    });
-    
-    });
-//map
-    function createMap(id, center, server='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')
-    {
-        var map = L.map(id, { zoomControl:false }).setView(center, 6);
-        var map_tiles_source = server;
-        var map_max_zoom = 4;
-
-        L.tileLayer(map_tiles_source, {
-            maxZoom: map_max_zoom,
-            attribution: '',
-            id: 'mapbox.light'
-        }).addTo(map);
-        map.attributionControl.addAttribution('Space AG');
-
-        return map;
-    }
-    $(document).ready(function()
-    {
-        var map= createMap('map', [0, 0], 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
-
-        var randomNum = Math.floor((Math.random()*100));
-
-
-    });
-
-    
-    window.onload = function () {
-
-var dataPoints1 = [];
-var dataPoints2 = [];
-var dataPoints3 = [];
-
-var chart = new CanvasJS.Chart("chartContainer", {
-  zoomEnabled: true,
-  
-  axisY:{
-    includeZero: false
-  }, 
-  toolTip: {
-    shared: true
-  },
-  legend: {
-    cursor:"pointer",
-    verticalAlign: "top",
-    fontSize: 14,
-    fontColor: "#717171",
-    itemclick : toggleDataSeries
-  },
-  data: [
-    { 
-      type: "line",
-      xValueType: "dateTime",
-      yValueFormatString: "###.00",
-      xValueFormatString: "hh:mm:ss TT",
-      showInLegend: true,
-      name: "Temperature",
-      dataPoints: dataPoints1,
-      color: "#717171",
-    },
-    {				
-      type: "line",
-      xValueType: "dateTime",
-      yValueFormatString: "###.00",
-      showInLegend: true,
-      name: "Humidity" ,
-      dataPoints: dataPoints2,
-      color:"#036920"
-    },
-    {
-      type: "line",
-      xValueType: "dateTime",
-      yValueFormatString: "###.00",
-      showInLegend: true,
-      name: "Light" ,
-      dataPoints: dataPoints3,
-      color:"#69af22"
-    }]
-});
-
-function toggleDataSeries(e) {
-  if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-    e.dataSeries.visible = false;
-  }
-  else {
-    e.dataSeries.visible = true;
-  }
-  chart.render();
-}
-
-var updateInterval = 3000;
-var yValue1 = 600; 
-var yValue2 = 605;
-var yValue3 = 610;
-
-var time = new Date;
-
-function updateChart(count) {
-  count = count || 1;
-  var deltaY1, deltaY2, deltaY3;
-  for (var i = 0; i < count; i++) {
-    time.setTime(time.getTime()+ updateInterval);
-    deltaY1 = .5 + Math.random() *(-.5-.5);
-    deltaY2 = .5 + Math.random() *(-.5-.5);
-    deltaY3 = .5 + Math.random() *(-.5-.5);
-
-  yValue1 = Math.round((yValue1 + deltaY1)*100)/100;
-  yValue2 = Math.round((yValue2 + deltaY2)*100)/100;
-  yValue3 = Math.round((yValue3 + deltaY3)*100)/100;
-
-  dataPoints1.push({
-    x: time.getTime(),
-    y: yValue1
-  });
-  dataPoints2.push({
-    x: time.getTime(),
-    y: yValue2
-  });
-  dataPoints3.push({
-    x: time.getTime(),
-    y: yValue3
-  });
-  }
-
-  chart.options.data[0].legendText = "Temperature";
-  chart.options.data[1].legendText = "Humidity "; 
-  chart.options.data[2].legendText = "Light(lux)";
-  chart.render();
-}
-
-updateChart(100);	
-setInterval(function(){updateChart()}, updateInterval);
-
-}
-
-var myConfig2 = {
-  "type":"gauge",
-  "scale-r":{
-    "aperture":200,
-    "values":"10:100:20" 
-  },
-  "series":[
-    {"values":[61.5]}
-  ]
-};
-
-var mySpeedData = {
-    "type": "gauge",
-    "scale-r":{
-        "aperture":200,
-        "values":"10:100:20"
-    },
-    "series":[
-        {"values":[20.5]}
-    ]
-};
- 
-zingchart.render({ 
-	id : 'myChart', 
-	data : myConfig2, 
-	height : "100%", 
-	width: "100%"
-});
-
-
-zingchart.render({
-    id:'mySpeed',
-    data: mySpeedData,
-    height: "100%",
-    width:"100%"
-})
-
-$('.general-sensorBoardList').click(function(){
-    location.href='listSensor.html';
-  })
+    $('#spaceag-top-nabvar-brand').click(function(){
+        location.href='sensor.html';
+    })
+    $('.general-board-sensor-list1').click(function(){
+        location.href='listSensor.html';
+    })
 </script>
 </body>
 </html>
