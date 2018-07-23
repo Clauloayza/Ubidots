@@ -515,7 +515,7 @@ a#user-menu-btn{
         <br>
         <br>
         <br>
-        <div class="card general" id="general-map-trackboard">
+          <div class="card general" >
                 <div class="card-header general" id="">
                     <i class="fas fa-map-marker-alt"></i>
                     <button class="btn btn-link name" >
@@ -643,16 +643,7 @@ a#user-menu-btn{
               </main>
               <nav class="col-lg-6 d-md-block sidebar">
                   <div class="sidebar-sticky">
-                    <h6 id="connected-bar" class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                      <span id="dot">
-                        <span id="connected-label">
-                          Conectado
-                        </span> 
-                        <span id="not-connected-label">
-                          No Conectado
-                        </span> 
-                      </span> 
-                    </h6>
+                    
                     <div class="contenedor-datos row">
                         <div class="col-12">
                             <li class="nav-item">
@@ -661,62 +652,72 @@ a#user-menu-btn{
                                 </a>	
                             </li>
                         </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Temperature
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Temperature:</h6>
-                                   <div class="temperature value-dato" id="temperature">100.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Humidity
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Humidity:</h6>
-                                   <div class="humidity value-dato" id="humidity">20.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Light(lux)
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Light(lux):</h6>
-                                   <div id='myChart' ></div>
-                               </div>
-                           </div>
-                          
+                        <div class="col variables-value">
+                                <div class="contenedor-datos row">
+                                        <div class="col-12">
+                                                <div>GENERAL</div>
+                                                <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th scope="col">TrackBoard</th>
+                                                            <th scope="col">Velocidad</th>
+                                                            <th scope="col">Batería</th>
+                                                            <th scope="col">Nivel del Tanque</th>
+                                                            
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>TrackBoard #1</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor Board</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Tractor Arandanos</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>TrackBoard</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor A</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tractor palto</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                        </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                        </div>
                      </div>
+
                      <div class="contenedor-datos row">
+                        
                        <div class="col-12">
                          <div id="level-components">
                           <div id="chartContainer" style="height: 250px; width: 100%;"></div>
@@ -733,58 +734,75 @@ a#user-menu-btn{
                             </li>
                         </div>
                         <div class="col variables-value">
-                            <div class="dropdown">
-                                    Velocidad
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                <div class="contenedor-datos row">
+                                        <div class="col-12">
+                                                <div>GENERAL</div>
+                                                <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th scope="col">TrackBoard</th>
+                                                            <th scope="col">Temperatura</th>
+                                                            <th scope="col">Humedad</th>
+                                                            <th scope="col">Radiación Solar</th>
+                                                            <th scope="col">Presión</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>TrackBoard #1</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor Board</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Tractor Arandanos</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>TrackBoard</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Sensor A</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tractor palto</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                            <td >0.00</td>
+                                                            <td >0.08</td>
+                                                        </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
                                     </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Speed:</h6>
-                                <div id='mySpeed'></div>
-                            </div>
                         </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Batería
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Battery:</h6>
-                                <div class="battery value-dato" id="battery">100.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Nivel del tanque
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Tank-level:</h6>
-                                <div class="tank-level value-dato" id="tank-level">100.00
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="contenedor-datos row">
                         <div class="col-12">
@@ -795,47 +813,7 @@ a#user-menu-btn{
                     </div>
                     <br>
                     <br>
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                                <div>Speed Vibration</div>
-                                <table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">Date</th>
-                                            <th scope="col" class="text-right">Speed</th>
-                                            <th scope="col" class="text-right">Vibration</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>July 16 2018-12:22:24</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
-                                            <td>July 16 2018-12:22:22</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
-                                            <td>July 16 2018-12:22:20</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
-                                            <td>July 16 2018-12:22:17</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
-                                            <td>July 16 2018-12:22:11</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.08</td>
-                                          </tr>
-                                        </tbody>
-                                </table>
-                        </div>
-                    </div>
+                    
                   </div>
                 </nav>
             </div>
@@ -1147,34 +1125,15 @@ a#user-menu-btn{
         width:"100%"
     })
 
+
+    $('#spaceag-top-nabvar-brand').click(function(){
+        location.href='sensor.html';
+    });
+
     $('.general-sensorBoardList').click(function(){
         location.href='listSensor.html';
-    })
-
-    //date range
-    $(function() {
-
-    $('input[name="datefilter"]').daterangepicker({
-        autoUpdateInput: false,
-        locale: {
-            cancelLabel: 'Clear'
-        }
     });
 
-    $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-    });
-
-    $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
-
-    });
-
-    
-    $('#general-map-trackboard').click(function(){
-        location.href='general.html';
-    });
 </script>
 </body>
 </html>
