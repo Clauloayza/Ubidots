@@ -264,6 +264,10 @@ a#user-menu-btn{
     td a{
         color: #036920;
     }
+    button.change-view{
+        background: transparent;
+        border: none;
+    }
 </style>
 <body>
     <div id="mySidenav" class="sidenav">
@@ -556,9 +560,12 @@ a#user-menu-btn{
 							  	</a>
 					    </li>				    
 					    <li class="nav-item">
-                            <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-board-sensor-list1" href="#" role="button" id="crop-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-list-ul"></i>
-                            </a>
+                                <button type="button" class="change-view" data-toggle="tooltip" data-placement="bottom" title="Toggle View">
+                                        <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-board-sensor-list1" href="#" role="button" id="crop-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-list-ul"></i>
+                                        </a>
+                                </button>
+                            
 					    </li>
 				  	</ul>
 				</div>

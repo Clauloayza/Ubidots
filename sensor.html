@@ -27,6 +27,8 @@
     }
     a#upload-data-btn.nav-link{
         margin-right: 10px;
+        color: #036920;
+        text-transform: uppercase;
     }
     #map { width:100%; height: 600px; z-index: -1}
     .sidenav {
@@ -107,7 +109,7 @@
     }
 
 
-#dot {
+    #dot {
       height: 10px;
       width: 10px;
       background-color: #dfdfdf;
@@ -143,39 +145,40 @@
     #dot.connected span#not-connected-label {
       display: none;
     }
-.sidebar{
-    padding-top: 0;
-}
- .sidebar-sticky {
-    position: relative;
-    height: calc(85vh - 40px);
-    overflow-x: hidden;
-    overflow-y: auto; 
-  }
-/*nav*/
-nav.navbar{
-    background:transparent;
-}
-a.dropdown-toggle{
-    color: #036920;
-}
-a#crop-dropdown{
-    color: #036920;
-}
-a#user-menu-btn{
-    color: #036920;
-}
+    .sidebar{
+        padding-top: 0;
+    }
+    .sidebar-sticky {
+        position: relative;
+        height: calc(85vh - 40px);
+        overflow-x: hidden;
+        overflow-y: auto; 
+    }
+    /*nav*/
+    nav.navbar{
+        background:transparent;
+    }
+    a.dropdown-toggle{
+        color: #036920;
+    }
+    a#crop-dropdown{
+        color: #036920;
+    }
+    a#user-menu-btn{
+        color: #036920;
+    }
 
-  /*jumbotron*/
-  .jumbotron{
-      margin-bottom: 0;
-      padding: 0;
-      border-radius: 0;
-  }
+    /*jumbotron*/
+    
+    .jumbotron{
+        margin-bottom: 0;
+        padding: 0;
+        border-radius: 0;
+    }
 
-  [role="main"]{
-      padding-top: 0;
-  }
+    [role="main"]{
+        padding-top: 0;
+    }
     .variables-value{
         background: #FFF;
         padding: 2% 5%;
@@ -289,7 +292,9 @@ a#user-menu-btn{
 </style>
 <body>
     <div id="mySidenav" class="sidenav">
-        <a href="sensor.html"><img src="./img/spaceag.png" width="150px" alt="" id="sidenavImg"></a> 
+        <a href="sensor.html">
+            <img src="./img/spaceag.png" width="150px" alt="" id="sidenavImg">
+        </a> 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <form action="" class="container search-trackBoard">
             <div class="form-row align-items-center">
@@ -304,104 +309,15 @@ a#user-menu-btn{
         </form>
         <div class="accordion sensorList" id="accordionExample">
             <div class="card  list" >
-              <div class="card-header" id="headingOne">
-                  <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    TrackBoard #1  
-                  </button >
-                  <button class=" btn btn-light view-sensor">
-                        <span class="fas fa-arrows-alt"></span>
-                  </button>
-              </div>
-          
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
-                        <div class="collapse-menu-body">
-                          <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-share"></span> Compartir
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-pencil-alt"></span> Renombrar
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-trash-alt"></span> Eliminar
-                                </a>
-                          </div>
-                        </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card  list">
-              <div class="card-header" id="headingTwo">
-                  <button class="btn btn-link collapsed list name" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Sensor Board
-                  </button>
-                  <button class=" btn btn-light view-sensor">
-                        <span class="fas fa-arrows-alt"></span>
-                  </button>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
-                        <div class="collapse-menu-body">
-                            <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-share"></span> Compartir
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-pencil-alt"></span> Renombrar
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-trash-alt"></span> Eliminar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="card list">
-              <div class="card-header" id="headingThree">
-                  <button class="btn btn-link collapsed list name" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Tractor Arandanos
-                  </button>
-                  <button class=" btn btn-light view-sensor">
-                        <span class="fas fa-arrows-alt"></span>
-                  </button>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
-                        <div class="collapse-menu-body">
-                            <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-share"></span> Compartir
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-pencil-alt"></span> Renombrar
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <span class="fas fa-trash-alt"></span> Eliminar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="card  list" >
                 <div class="card-header" id="headingOne">
-                    <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
-                        TrackBoard  
+                    <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            TrackBoard #1  
                     </button >
                     <button class=" btn btn-light view-sensor">
                             <span class="fas fa-arrows-alt"></span>
                     </button>
                 </div>
-                
-                <div id="collapsefour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
                             <div class="collapse-menu-body">
@@ -418,6 +334,93 @@ a#user-menu-btn{
                             </div>
                             </div>
                     </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card  list">
+                <div class="card-header" id="headingTwo">
+                    <button class="btn btn-link collapsed list name" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Sensor Board
+                    </button>
+                    <button class=" btn btn-light view-sensor">
+                            <span class="fas fa-arrows-alt"></span>
+                    </button>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
+                            <div class="collapse-menu-body">
+                                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-share"></span> Compartir
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-pencil-alt"></span> Renombrar
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-trash-alt"></span> Eliminar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card list">
+                <div class="card-header" id="headingThree">
+                    <button class="btn btn-link collapsed list name" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Tractor Arandanos
+                    </button>
+                    <button class=" btn btn-light view-sensor">
+                            <span class="fas fa-arrows-alt"></span>
+                    </button>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
+                            <div class="collapse-menu-body">
+                                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-share"></span> Compartir
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-pencil-alt"></span> Renombrar
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-trash-alt"></span> Eliminar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card  list" >
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+                            TrackBoard  
+                    </button >
+                    <button class=" btn btn-light view-sensor">
+                            <span class="fas fa-arrows-alt"></span>
+                    </button>
+                </div>
+                <div id="collapsefour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
+                            <div class="collapse-menu-body">
+                                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                                        <a class="list-group-item" href="#">
+                                            <span class="fas fa-share"></span> Compartir
+                                        </a>
+                                        <a class="list-group-item" href="#">
+                                            <span class="fas fa-pencil-alt"></span> Renombrar
+                                        </a>
+                                        <a class="list-group-item" href="#">
+                                            <span class="fas fa-trash-alt"></span> Eliminar
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -430,12 +433,11 @@ a#user-menu-btn{
                             <span class="fas fa-arrows-alt"></span>
                     </button>
                 </div>
-            
                 <div id="collapsefive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
                             <div class="collapse-menu-body">
-                            <div class="list-group list-group-flush" id="list-tab" role="tablist">
+                                <div class="list-group list-group-flush" id="list-tab" role="tablist">
                                     <a class="list-group-item" href="#">
                                         <span class="fas fa-share"></span> Compartir
                                     </a>
@@ -445,105 +447,102 @@ a#user-menu-btn{
                                     <a class="list-group-item" href="#">
                                         <span class="fas fa-trash-alt"></span> Eliminar
                                     </a>
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
-                <div class="card  list" >
-                    <div class="card-header" id="headingOne">
-                        <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapseOne">
+            </div>
+            <div class="card  list" >
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapseOne">
                             Sensor A
-                        </button >
-                        <button class=" btn btn-light view-sensor">
-                                <span class="fas fa-arrows-alt"></span>
-                        </button>
-                    </div>
-                
-                    <div id="collapsesix" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
-                                <div class="collapse-menu-body">
+                    </button >
+                    <button class=" btn btn-light view-sensor">
+                            <span class="fas fa-arrows-alt"></span>
+                    </button>
+                </div>
+                <div id="collapsesix" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
+                            <div class="collapse-menu-body">
                                 <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-share"></span> Compartir
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-pencil-alt"></span> Renombrar
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-trash-alt"></span> Eliminar
-                                        </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-share"></span> Compartir
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-pencil-alt"></span> Renombrar
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-trash-alt"></span> Eliminar
+                                    </a>
                                 </div>
-                                </div>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card  list" >
-                    <div class="card-header" id="headingOne">
-                        <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
+            </div>
+            <div class="card  list" >
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link name" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
                             tractor palto
-                        </button >
-                        <button class=" btn btn-light view-sensor">
-                                <span class="fas fa-arrows-alt"></span>
-                        </button>
-                    </div>
-                
-                    <div id="collapseseven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
-                                <div class="collapse-menu-body">
+                    </button >
+                    <button class=" btn btn-light view-sensor">
+                            <span class="fas fa-arrows-alt"></span>
+                    </button>
+                </div>
+                <div id="collapseseven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div id="producción-submenu" class="collapse show" aria-labelledby="headingOne" data-parent="#data-variable-submenu">
+                            <div class="collapse-menu-body">
                                 <div class="list-group list-group-flush" id="list-tab" role="tablist">
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-share"></span> Compartir
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-pencil-alt"></span> Renombrar
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <span class="fas fa-trash-alt"></span> Eliminar
-                                        </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-share"></span> Compartir
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-pencil-alt"></span> Renombrar
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="fas fa-trash-alt"></span> Eliminar
+                                    </a>
                                 </div>
-                                </div>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-          </div>
+            </div>
+        </div>
         <br>
         <br>
         <br>
         <div class="card general" id="general-map-trackboard">
-                <div class="card-header general" id="">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <button class="btn btn-link name" >
-                      GENERAL
-                    </button >
-                    <button class=" btn btn-light view-sensor">
-                          <span class="fas fa-arrows-alt"></span>
-                    </button>
-                </div>
+            <div class="card-header general" id="">
+                <i class="fas fa-map-marker-alt"></i>
+                <button class="btn btn-link name" >
+                        GENERAL
+                </button >
+                <button class=" btn btn-light view-sensor">
+                        <span class="fas fa-arrows-alt"></span>
+                </button>
+            </div>
         </div>
     </div>
     <header id="main-header">
 		<div class="container-fluid">
-			<main class="navbar navbar-expand-lg">
+			<nav class="navbar navbar-expand-lg">
 				<a class="navbar-brand" href="#">
 					<img src="./img/spaceag.png" width="150px" id="spaceag-top-nabvar-brand" alt="SpaceAG">
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				  	<span class="navbar-toggler-icon"></span>
 				</button>
-				
 				<div class="collapse navbar-collapse" id="navbarNav">
 				  	<ul class="navbar-nav ml-auto user">
 					    <li class="nav-item">
-						      	<a id="upload-data-btn" class="nav-link btn btn-light dropdown-toggle" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						      		<i class="fas fa-arrow-up right-margin"></i>
-						      		Nuevo Tractor
-						      	</a>	
+                            <a id="upload-data-btn" class="nav-link btn btn-light dropdown-toggle" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-arrow-up right-margin"></i>
+                                Nuevo Tractor
+                            </a>	
 					    </li>
 					    <li class="nav-item">
 					      	<a class="nav-link btn btn-light dropdown-toggle dropdown-toggle-white" role="button" id="user-menu-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -564,71 +563,74 @@ a#user-menu-btn{
 					    </li>
 				  	</ul>
 				</div>
-			</nav>		
+            </nav>		
 		</div>
 	</header> 
     <section class="jumbotron">
        <div class="container-fluid">
-			<nav class="navbar navbar-expand">
-                <li class="nav-item">
+			<main class="navbar navbar-expand">
+                <div class="nav-item">
                     <a id="upload-data-btn" class="nav-link btn btn-light general-track" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="openNav()">
                         <span class="fa fa-bars " ></span>
+                    </a>	
+                </div>
+                <div class="nav-item">
+                    <a id="upload-data-btn" class="nav-link general-track nameTrack" >
                         Tractor #1
                     </a>	
-                </li>
+                </div>
 				<div class="collapse navbar-collapse text-center " id="">
 				  	<ul class="navbar-nav ml-auto view-selection-sensor">
 					    <li class="nav-item">
-							  	<a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track" href="#" role="button" id="org-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    	<i class="fas fa-search"></i>
-							  	</a>
+                            <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track" href="#" role="button" id="org-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                                <div class="dropdown">
-                                    <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track" href="#" role="button" id="farm-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown">
+                                <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track" href="#" role="button" id="farm-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-calendar-alt"></i>
-                                    </a>
-                                    <div class="dropdown-menu calendar-show" aria-labelledby="farm-dropdown">
-                                      <a class="dropdown-item" href="#">Last Hour</a>
-                                      <a class="dropdown-item" href="#">Today</a>
-                                      <a class="dropdown-item" href="#">Last 24 hrs</a>
-                                      <a class="dropdown-item" href="#">This week</a>
-                                      <a class="dropdown-item" href="#">Last 7 days</a>
-                                      <a class="dropdown-item" href="#">This month</a>
-                                      <a class="dropdown-item" href="#">Last 30 Days</a>
-                                      <a class="dropdown-item" href="#">Last 60 Days</a>
-                                      <a class="dropdown-item" href="#">Last 180 Days</a>
+                                </a>
+                                <div class="dropdown-menu calendar-show" aria-labelledby="farm-dropdown">
+                                        <a class="dropdown-item" href="#">Last Hour</a>
+                                        <a class="dropdown-item" href="#">Today</a>
+                                        <a class="dropdown-item" href="#">Last 24 hrs</a>
+                                        <a class="dropdown-item" href="#">This week</a>
+                                        <a class="dropdown-item" href="#">Last 7 days</a>
+                                        <a class="dropdown-item" href="#">This month</a>
+                                        <a class="dropdown-item" href="#">Last 30 Days</a>
+                                        <a class="dropdown-item" href="#">Last 60 Days</a>
+                                        <a class="dropdown-item" href="#">Last 180 Days</a>
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                                             Custom Range
                                         </button>
                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                ...
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        </div>
-                                      <a class="dropdown-item" href="#"><input type="text" name="datefilter" value="" placeholder="Rango personalizado"/></a>
-                                   </div>
+                                    <a class="dropdown-item" href="#"><input type="text" name="datefilter" value="" placeholder="Rango personalizado"/></a>
                                 </div>
+                            </div>
                         </li>	
-                        					    
-					    <li class="nav-item" >
-							  	<a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-sensorBoardList"  role="button" id="crop-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    	<i class="fas fa-sitemap"></i>
-                                </a>
+                        <li class="nav-item" >
+                            <a class="crop-selection-menu-btn btn btn-light dropdown-toggle detalle-track general-sensorBoardList"  role="button" id="crop-dropdown"  >
+                                <i class="fas fa-sitemap"></i>
+                            </a>
                         </li>
                     </ul>
 				</div>
@@ -637,214 +639,207 @@ a#user-menu-btn{
     </section>
     <div class="container-fluid">
             <div class="row">
-              <main role="main" class="col-lg-6 col-md-12 ml-sm-auto">
-                <div id='map'>
-                </div>
-              </main>
-              <nav class="col-lg-6 d-md-block sidebar">
-                  <div class="sidebar-sticky">
-                    <h6 id="connected-bar" class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                      <span id="dot">
-                        <span id="connected-label">
-                          Conectado
-                        </span> 
-                        <span id="not-connected-label">
-                          No Conectado
-                        </span> 
-                      </span> 
-                    </h6>
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                            <li class="nav-item">
-                                <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
-                                     DATOS AMBIENTALES
-                                </a>	
-                            </li>
+                <main role="main" class="col-lg-6 col-md-12 ml-sm-auto">
+                    <div id='map'>
+                    </div>
+                </main>
+                <nav class="col-lg-6 d-md-block sidebar">
+                    <div class="sidebar-sticky">
+                        <h6 id="connected-bar" class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span id="dot">
+                                <span id="connected-label">
+                                Conectado
+                                </span> 
+                                <span id="not-connected-label">
+                                No Conectado
+                                </span> 
+                            </span> 
+                        </h6>
+                        <div class="contenedor-datos row">
+                            <div class="col-12">
+                                <li class="nav-item">
+                                    <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
+                                        DATOS AMBIENTALES
+                                    </a>	
+                                </li>
+                            </div>
+                            <div class="col variables-value">
+                                <div class="dropdown">
+                                        Temperature
+                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <h6 class="text-center">Last value Temperature:</h6>
+                                    <div class="temperature value-dato" id="temperature">100.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col variables-value">
+                                <div class="dropdown">
+                                        Humidity
+                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <h6 class="text-center">Last value Humidity:</h6>
+                                    <div class="humidity value-dato" id="humidity">20.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col variables-value">
+                                <div class="dropdown">
+                                        Light(lux)
+                                        <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        </span>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                        </div>
+                                </div>
+                                <div class="nav-item">
+                                    <h6 class="text-center">Last value Light(lux):</h6>
+                                    <div id='myChart' ></div>
+                                </div>
+                            </div>
                         </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Temperature
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Temperature:</h6>
-                                   <div class="temperature value-dato" id="temperature">100.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Humidity
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Humidity:</h6>
-                                   <div class="humidity value-dato" id="humidity">20.00
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col variables-value">
-                               <div class="dropdown">
-                                       Light(lux)
-                                       <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       </span>
-                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                         <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                         <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                       </div>
-                               </div>
-                               <div class="nav-item">
-                                   <h6 class="text-center">Last value Light(lux):</h6>
-                                   <div id='myChart' ></div>
-                               </div>
-                           </div>
-                          
-                     </div>
-                     <div class="contenedor-datos row">
-                       <div class="col-12">
-                         <div id="level-components">
-                          <div id="chartContainer" style="height: 250px; width: 100%;"></div>
-                          </div>
-                       </div>
-                     </div>
-                   
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                            <li class="nav-item">
-                                <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
-                                     DATOS TRACTOR
-                                </a>	
-                            </li>
+                        <div class="contenedor-datos row">
+                            <div class="col-12">
+                                <div id="level-components">
+                                    <div id="chartContainer" style="height: 250px; width: 100%;"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
+                        <div class="contenedor-datos row">
+                            <div class="col-12">
+                                <li class="nav-item">
+                                    <a id="upload-data-btn" class="nav-link btn btn-light datos-ambient" href="#" >
+                                        DATOS TRACTOR
+                                    </a>	
+                                </li>
+                            </div>
+                            <div class="col variables-value">
+                                <div class="dropdown">
                                     Velocidad
                                     <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     </span>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
                                     </div>
+                                </div>
+                                <div class="nav-item">
+                                    <h6 class="text-center">Last value Speed:</h6>
+                                    <div id='mySpeed'></div>
+                                </div>
                             </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Speed:</h6>
-                                <div id='mySpeed'></div>
+                            <div class="col variables-value">
+                                <div class="dropdown">
+                                        Batería
+                                        <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        </span>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                        </div>
+                                </div>
+                                <div class="nav-item">
+                                        <h6 class="text-center">Last value Battery:</h6>
+                                        <div class="battery value-dato" id="battery">100.00
+                                        </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Batería
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Battery:</h6>
-                                <div class="battery value-dato" id="battery">100.00
+                            <div class="col variables-value">
+                                <div class="dropdown">
+                                        Nivel del tanque
+                                        <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        </span>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
+                                        </div>
+                                </div>
+                                <div class="nav-item">
+                                        <h6 class="text-center">Last value Tank-level:</h6>
+                                        <div class="tank-level value-dato" id="tank-level">100.00
+                                        </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col variables-value">
-                            <div class="dropdown">
-                                    Nivel del tanque
-                                    <span class="dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-share"></i> Compartir</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Ajustes</a>
-                                      <a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Apagar</a>
-                                    </div>
-                            </div>
-                            <div class="nav-item">
-                                <h6 class="text-center">Last value Tank-level:</h6>
-                                <div class="tank-level value-dato" id="tank-level">100.00
+                        <div class="contenedor-datos row">
+                            <div class="col-12">
+                                <div id="level-components-speed-vibration">
+                                    <div id="chartContainerSpeedVibration" style="height: 250px; width: 100%;"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
-                            <div id="level-components-speed-vibration">
-                            <div id="chartContainerSpeedVibration" style="height: 250px; width: 100%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="contenedor-datos row">
-                        <div class="col-12">
+                        <br>
+                        <br>
+                        <div class="contenedor-datos row">
+                            <div class="col-12">
                                 <div>Speed Vibration</div>
                                 <table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">Date</th>
-                                            <th scope="col" class="text-right">Speed</th>
-                                            <th scope="col" class="text-right">Vibration</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col" class="text-right">Speed</th>
+                                        <th scope="col" class="text-right">Vibration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
                                             <td>July 16 2018-12:22:24</td>
                                             <td class="text-right">0.00</td>
                                             <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <td>July 16 2018-12:22:22</td>
                                             <td class="text-right">0.00</td>
                                             <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <td>July 16 2018-12:22:20</td>
                                             <td class="text-right">0.00</td>
                                             <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <td>July 16 2018-12:22:17</td>
                                             <td class="text-right">0.00</td>
                                             <td class="text-right">0.08</td>
-                                          </tr>
-                                          <tr>
+                                        </tr>
+                                        <tr>
                                             <td>July 16 2018-12:22:11</td>
                                             <td class="text-right">0.00</td>
                                             <td class="text-right">0.08</td>
-                                          </tr>
-                                        </tbody>
+                                        </tr>
+                                    </tbody>
                                 </table>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </nav>
             </div>
-          </div>
-    
-   
-
-
-
+    </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

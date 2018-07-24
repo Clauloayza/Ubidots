@@ -27,6 +27,8 @@
     }
     a#upload-data-btn.nav-link{
         margin-right: 10px;
+        color: #036920;
+        text-transform: uppercase;
     }
     #map { width:100%; height: 600px; z-index: -1}
     .sidenav {
@@ -570,12 +572,16 @@ a#user-menu-btn{
     <section class="jumbotron">
        <div class="container-fluid">
 			<nav class="navbar navbar-expand">
-                <li class="nav-item">
+                <div class="nav-item">
                     <a id="upload-data-btn" class="nav-link btn btn-light general-track" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="openNav()">
                         <span class="fa fa-bars " ></span>
-                        General
                     </a>	
-                </li>
+                </div>
+                <div class="nav-item">
+                    <a id="upload-data-btn" class="nav-link general-track">
+                       General
+                    </a>	
+                </div>
 				<div class="collapse navbar-collapse text-center " id="">
 				  	<ul class="navbar-nav ml-auto view-selection-sensor">
 					    <li class="nav-item">
@@ -655,15 +661,14 @@ a#user-menu-btn{
                         <div class="col variables-value">
                                 <div class="contenedor-datos row">
                                         <div class="col-12">
-                                                <div>GENERAL</div>
                                                 <table class="table">
                                                         <thead>
                                                           <tr>
                                                             <th scope="col">TrackBoard</th>
                                                             <th scope="col">Vibración</th>
-                                                            <th scope="col">Velocidad</th>
-                                                            <th scope="col">Nivel del Tanque</th>
-                                                            <th scope="col">Batería</th>
+                                                            <th scope="col">Velocidad (km/h)</th>
+                                                            <th scope="col">Nivel del Tanque (g)</th>
+                                                            <th scope="col">Batería (%)</th>
                                                             
                                                         </tr>
                                                         </thead>
@@ -714,7 +719,7 @@ a#user-menu-btn{
                                                             <td>Tractor palto</td>
                                                             <td >0.00</td>
                                                             <td >0.08</td>
-                                                            <td >0.00</td>
+                                                            <td>0.00</td>
                                                             <td >0.00</td>
                                                         </tr>
                                                         </tbody>
@@ -723,7 +728,6 @@ a#user-menu-btn{
                                     </div>
                         </div>
                      </div>
-
                      <div class="contenedor-datos row">
                         
                        <div class="col-12">
@@ -733,6 +737,8 @@ a#user-menu-btn{
                        </div>
                      </div>
                    
+                     <br>
+                     <br>
                     <div class="contenedor-datos row">
                         <div class="col-12">
                             <li class="nav-item">
@@ -744,16 +750,15 @@ a#user-menu-btn{
                         <div class="col variables-value">
                                 <div class="contenedor-datos row">
                                         <div class="col-12">
-                                                <div>GENERAL</div>
                                                 <table class="table">
                                                         <thead>
                                                           <tr>
                                                             <th scope="col">TrackBoard</th>
-                                                            <th scope="col">Temperatura</th>
-                                                            <th scope="col">Humedad</th>
-                                                            <th scope="col">Radiación Solar</th>
-                                                            <th scope="col">Presión</th>
-                                                            <th scope="col">Altitud</th>
+                                                            <th scope="col">Temperature </th>
+                                                            <th scope="col">Humidity (%)</th>
+                                                            <th scope="col">Light(lux) (W/m2)</th>
+                                                            <th scope="col">Pressure (Kpa)</th>
+                                                            <th scope="col">Altitude (Pa)</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -945,7 +950,7 @@ a#user-menu-btn{
         yValueFormatString: "###.00",
         xValueFormatString: "hh:mm:ss TT",
         showInLegend: true,
-        name: "Temperature",
+        name: "Vibration",
         dataPoints: dataPoints1,
         color: "#717171",
         },
@@ -954,22 +959,13 @@ a#user-menu-btn{
         xValueType: "dateTime",
         yValueFormatString: "###.00",
         showInLegend: true,
-        name: "Humidity" ,
+        name: "Speed" ,
         dataPoints: dataPoints2,
         color:"#036920"
-        },
-        {
-        type: "line",
-        xValueType: "dateTime",
-        yValueFormatString: "###.00",
-        showInLegend: true,
-        name: "Light" ,
-        dataPoints: dataPoints3,
-        color:"#69af22"
         }]
     });
 
-    //CHART SPEED AND VIBRATION
+    //CHART GENERAL AND VIBRATION
     var chartSpeed = new CanvasJS.Chart("chartContainerSpeedVibration", {
     zoomEnabled: true,
     
@@ -993,8 +989,8 @@ a#user-menu-btn{
         yValueFormatString: "###.00",
         xValueFormatString: "hh:mm:ss TT",
         showInLegend: true,
-        name: "Speed",
-        dataPoints: dataPoints4,
+        name: "Temperature",
+        dataPoints: dataPoints3,
         color: "#036920",
         },
         {				
@@ -1002,10 +998,19 @@ a#user-menu-btn{
         xValueType: "dateTime",
         yValueFormatString: "###.00",
         showInLegend: true,
-        name: "Vibration" ,
-        dataPoints: dataPoints5,
+        name: "Humidity" ,
+        dataPoints: dataPoints4,
         color:"#dfdfdf"
-        }]
+        },
+        {				
+        type: "line",
+        xValueType: "dateTime",
+        yValueFormatString: "###.00",
+        showInLegend: true,
+        name: "Light(Lux)" ,
+        dataPoints: dataPoints5,
+        color:"#69af22"
+        },]
     });
 
     function toggleDataSeries(e) {
@@ -1029,26 +1034,24 @@ a#user-menu-btn{
     }
 
     var updateInterval = 3000;
-    var yValue1 = 70; 
-    var yValue2 = 60;
-    var yValue3 = 50;
-    var yValue4 = 100;
-    var yValue5 = 100;
+    var yValue1 = 100; 
+    var yValue2 = 100;
+    var yValue3 = 125.05;
+    var yValue4 = 120.00;
+    var yValue5 = 100.00;
 
     var time = new Date;
 
     function updateChart(count) {
     count = count || 1;
-    var deltaY1, deltaY2, deltaY3;
+    var deltaY1, deltaY2;
     for (var i = 0; i < count; i++) {
         time.setTime(time.getTime()+ updateInterval);
         deltaY1 = .5 + Math.random() *(-.5-.5);
         deltaY2 = .5 + Math.random() *(-.5-.5);
-        deltaY3 = .5 + Math.random() *(-.5-.5);
 
     yValue1 = Math.round((yValue1 + deltaY1)*100)/100;
     yValue2 = Math.round((yValue2 + deltaY2)*100)/100;
-    yValue3 = Math.round((yValue3 + deltaY3)*100)/100;
 
     dataPoints1.push({
         x: time.getTime(),
@@ -1058,29 +1061,30 @@ a#user-menu-btn{
         x: time.getTime(),
         y: yValue2
     });
-    dataPoints3.push({
-        x: time.getTime(),
-        y: yValue3
-    });
     }
 
-    chart.options.data[0].legendText = "Temperature";
-    chart.options.data[1].legendText = "Humidity "; 
-    chart.options.data[2].legendText = "Light(lux)";
+    chart.options.data[0].legendText = "Vibration";
+    chart.options.data[1].legendText = "Speed "; 
     chart.render();
     }
 
     function updateChartSpeed(count) {
     count = count || 1;
-    var deltaY4, deltaY5;
+    var deltaY3, deltaY4, deltaY5;
     for (var i = 0; i < count; i++) {
         time.setTime(time.getTime()+ updateInterval);
+        deltaY3 = .5 + Math.random() *(-.5-.5);
         deltaY4 = .5 + Math.random() *(-.5-.5);
         deltaY5 = .5 + Math.random() *(-.5-.5);
 
+    yValue3 = Math.round((yValue3 + deltaY3)*100)/100;
     yValue4 = Math.round((yValue4 + deltaY4)*100)/100;
     yValue5 = Math.round((yValue5 + deltaY5)*100)/100;
 
+    dataPoints3.push({
+        x: time.getTime(),
+        y: yValue3
+    });
     dataPoints4.push({
         x: time.getTime(),
         y: yValue4
@@ -1091,8 +1095,9 @@ a#user-menu-btn{
     });
     }
 
-    chartSpeed.options.data[0].legendText = "Speed";
-    chartSpeed.options.data[1].legendText = "Vibration"; 
+    chartSpeed.options.data[0].legendText = "Temperature";
+    chartSpeed.options.data[1].legendText = "Humidity"; 
+    chartSpeed.options.data[2].legendText = "Light(lux)"; 
     chartSpeed.render();
     }
 
