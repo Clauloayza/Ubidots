@@ -20,10 +20,17 @@
     li{
         list-style: none;
     }
+    li.nav-item.headerDevice{
+        margin: 0 30px;
+    }
     a.dropdown-toggle.detalle-track{
         border-radius: 100px;
         width: 56px;
         margin: 0 5px;
+    }
+    a.nav-link{
+        padding: 0 auto;
+        border-color: transparent;
     }
     a#upload-data-btn.nav-link{
         margin-right: 10px;
@@ -31,6 +38,13 @@
         text-transform: uppercase;
     }
     #map { width:100%; height: 600px; z-index: -1}
+    /*header*/
+    a.headerOrganization{
+        padding: 5px 50px !important;
+        color: #036920 !important;
+    }
+
+
     .sidenav {
         height: 100%;
         width: 0;
@@ -115,7 +129,6 @@
       background-color: #dfdfdf;
       border-radius: 50%;
       display: inline;
-      margin-bottom: 10px;
     }
 
     #dot span#connected-label {
@@ -124,7 +137,7 @@
 
     #dot span#not-connected-label {
       display: inline;
-
+      margin-top: -5px;
     }
 
     #dot.connected {
@@ -132,9 +145,8 @@
     }
 
     span#dot span {
-        position: relative;
-        left: 15px;
-        top: -2px;
+        position: absolute;
+        left: 34px;
         width: 100%;
     }
 
@@ -281,6 +293,18 @@
     }
     path#mySpeed-graph-id0-plotset-plot-0-node-0-arrow-path{
         fill: #69af22;
+    }
+    /*battery*/
+    .zc-ref {
+        display: none;
+    }
+    div#battery-wrapper{
+        height: 100px !important;
+    }
+    /*tank-level*/
+    
+    div#tank-level-wrapper{
+        height: 100px !important;
     }
     a.dropdown-item:hover{
         color: #69af22;
@@ -529,14 +553,37 @@
     </div>
     <header id="main-header">
 		<div class="container-fluid">
-			<nav class="navbar navbar-expand-lg">
-				<a class="navbar-brand" href="#">
-					<img src="./img/spaceag.png" width="150px" id="spaceag-top-nabvar-brand" alt="SpaceAG">
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				  	<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
+			<nav class="navbar navbar-expand-lg row">
+                <a class="navbar-brand col" href="#">
+                    <img src="./img/spaceag.png" width="150px" id="spaceag-top-nabvar-brand" alt="SpaceAG">
+                </a>
+				<div class="collapse navbar-collapse text-center col-7 col-md-6 col-xs-7" id="">
+                    <ul class="navbar-nav ml-auto view-selection-sensor">
+                        <li class="nav-item headerDevice">
+                            <div class="dropdown">
+                                <a class="nav-link btn btn-light dropdown-toggle dropdown-toggle-white headerOrganization" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Detalle
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="farm-dropdown">
+                                        <a class="dropdown-item" href="#">Detalle</a>
+                                        <a class="dropdown-item" href="#">Event´s</a>
+                               </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link btn btn-light dropdown-toggle dropdown-toggle-white headerOrganization" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Usuarios
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="farm-dropdown">
+                                        <a class="dropdown-item" href="#">Organization</a>
+                                        <a class="dropdown-item" href="#">User´s</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+				<div class="collapse navbar-collapse col-md-2 col-lg-3 col-xs-3" id="navbarNav">
 				  	<ul class="navbar-nav ml-auto user">
 					    <li class="nav-item">
                             <a id="upload-data-btn" class="nav-link btn btn-light dropdown-toggle" href="#" role="button" id="upload-data-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -763,7 +810,7 @@
                                 </div>
                                 <div class="nav-item">
                                         <h6 class="text-center">Last value Battery:</h6>
-                                        <div class="battery value-dato" id="battery">100.00
+                                        <div class="battery value-dato" id="battery">
                                         </div>
                                 </div>
                             </div>
@@ -781,7 +828,7 @@
                                 </div>
                                 <div class="nav-item">
                                         <h6 class="text-center">Last value Tank-level:</h6>
-                                        <div class="tank-level value-dato" id="tank-level">100.00
+                                        <div class="tank-level value-dato" id="tank-level">
                                         </div>
                                 </div>
                             </div>
@@ -850,7 +897,7 @@
 <script src="./Gauge/js/cmGauge.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"; ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
+<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"</script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -1145,6 +1192,220 @@
     $('.general-sensorBoardList').click(function(){
         location.href='listSensor.html';
     })
+    //Batery
+    var bateryData = {
+    graphset:[
+        {
+            type:"bar",
+            height: "100px",
+            width: "100%",
+            scaleY:{
+            lineColor: "none",
+            values: "0:100:10",
+            guide:{
+                visible: false
+            },
+            tick:{
+            visible: false,
+            },
+            minorTicks: 0,
+            minorTick: {
+            visible: false,
+            },
+            item:{
+            visible: false,
+            }
+            },
+            "scale-y-2":{
+            values: "0:100:10",
+            lineColor: "none",
+            item:{
+                visible: false
+            },
+            guide:{
+                visible: false
+            },
+            tick:{
+                placement: "inner",
+                padding: 0,
+                margin: 0,
+                offsetX: 50,
+                lineColor: "#fff",
+                rules:[
+                {
+                    rule: "%i == 0 || %i == 10",
+                    visible: false
+                }
+                ]
+            }
+            },
+            plot:{
+            barsOverlap: "100%",
+            borderRadius: 10,
+            hoverState: {
+                visible: false
+            },
+            tooltip:{
+                visible: false
+                }
+            },
+            plotarea:{
+            marginBottom: "5%",
+            marginTop: "5%"
+            },
+            scaleX:{
+            visible: false
+            },
+        series:[
+            {
+            values: [100],
+            backgroundColor: "#fff",
+            borderWidth: 1,
+            borderColor: "#dfdfdf",
+            maxTrackers: 0,
+            barWidth: "100%",
+            tooltip:{
+                visble: true
+            }
+            },
+            {
+            values: [60],
+            backgroundColor: "#69af22",
+            barWidth: "93%",
+            tooltip:{
+                visible: false
+            },
+            valueBox:{
+                visible: false,
+            }
+            }
+        ]
+        }
+    ]
+    };
+        
+    zingchart.render({ 
+        id : 'battery', 
+        data : bateryData, 
+    });
+
+    /*tank-level*/
+    var tankLevelData = {
+    graphset:[
+        {
+        type:"bar",
+            height: "100px",
+            width: "130%",
+            scaleY:{
+            lineColor: "none",
+            values: "0:100:10",
+            guide:{
+                visible: false
+            },
+            tick:{
+            size: 13,
+            lineColor: "#717171",
+            placement: "outter",
+            rules:[
+                {
+                rule: "%i % 2 == 1",
+                lineWidth: 2
+                }
+            ]
+            },
+            minorTicks: 3,
+            minorTick: {
+            lineColor: "#717171",
+            placement: "inner",
+            size: 7
+            },
+            item:{
+            fontSize: 13,
+            rules:[
+                {
+                rule: "%i % 2 == 1",
+                visible: false
+                }
+            ]
+            }
+            },
+            "scale-y-2":{
+            values: "0:100:10",
+            lineColor: "none",
+            item:{
+                visible: false
+            },
+            guide:{
+                visible: false
+            },
+            tick:{
+                placement: "inner",
+                padding: 0,
+                margin: 0,
+                offsetX: 50,
+                lineColor: "#fff",
+                rules:[
+                {
+                    rule: "%i == 0 || %i == 10",
+                    visible: false
+                }
+                ]
+            }
+            },
+            plot:{
+            barsOverlap: "100%",
+            borderRadius: 10,
+            hoverState: {
+                visible: false
+            },
+            tooltip:{
+                visible: false
+                }
+            },
+            plotarea:{
+            marginBottom: "5%",
+            marginTop: "5%"
+            },
+            scaleX:{
+            visible: false
+            },
+            series:[
+            {
+            values: [100],
+            backgroundColor: "#fff",
+            borderWidth: 1,
+            borderColor: "#dfdfdf",
+            maxTrackers: 0,
+            barWidth: "100%",
+            tooltip:{
+                visble: true
+            }
+            },
+            {
+            values: [50],
+            backgroundColor: "#69af22",
+            barWidth: "93%",
+            tooltip:{
+                visible: false
+            },
+            valueBox:{
+                text: "%v",
+                    placement: "bottom-out",
+                    offsetY: -25,
+                    fontSize: 15,
+                    fontColor: "#fff",
+            }
+            }
+        ]
+        }
+    ]
+    };
+    
+    zingchart.render({ 
+        id : 'tank-level', 
+        data : tankLevelData, 
+    });
+
 
     //date range
     $(function() {
